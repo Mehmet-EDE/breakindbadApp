@@ -1,12 +1,35 @@
-body{
-  background-color: #282c34;
+body {
+  background-color: #041C32;
   color: beige;
 }
+
 .App {
   padding-top: 6rem;
   text-align: center;
 }
+
 .App-link {
   color: #61dafb;
   text-decoration: none;
+}
+
+nav ul {
+  display: contents;
+  list-style-type: none;
+}
+
+nav {
+  background-color: gray;
+  border-radius: 15px;
+  display: flex;
+}
+
+nav ul li {
+  padding: 5px;
+}
+
+.qouteLink {
+  color: beige;
+  text-decoration: none;
+  margin-left: 10px;
 }
