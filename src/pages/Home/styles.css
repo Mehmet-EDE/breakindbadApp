@@ -1,10 +1,18 @@
-.character {
-  width: 75%;
-  padding: 10px;
-  background: gray;
-  border-radius: 15px;
+.charContainer {
+  display: inline-grid;
+  grid-template-columns: 300px 50px 50px;
+  grid-gap: 5px;
+  background-color: transparent;
+  color: #444;
 }
 
+.character {
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 150%;
+  width: 90%;
+}
 .loadBtn {
   font-family: cursive;
   width: 10rem;
@@ -30,15 +38,6 @@
   font-weight: 900;
   box-shadow: 1px 2px 3px #0b5ed7;
 }
-
-.alertContainer {
-  width: fit-content;
-  margin-left: 27%;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-}
-
 .alertNotification {
   box-shadow: 0 0 1rem #410c11;
   border-radius: 25px;
@@ -46,14 +45,8 @@
   background-color: #f8d7da;
   color: #842029;
 }
-
-.charContainer {
-  width: 35%;
-  background-color: gray;
+.innerContainer{
+  background-color: #2D4263;
+  width: fit-content;
   border-radius: 15px;
-  margin: 15px;
-  margin-left: 300px;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }

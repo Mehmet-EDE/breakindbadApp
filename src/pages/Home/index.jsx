@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchCharacters } from '../../redux/characterSlice'
 import './styles.css';
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import { Link } from "react-router-dom";
 
 function Home() {
@@ -28,19 +28,19 @@ function Home() {
       <h1> <u>Characters</u></h1>
       {
         data.map(character => (
-          <Row className="justify-content-md-center" key={character.char_id}>
-            <Col xs lg="2">
-              <div className='charContainer'>
-                <Link to={`/character/${character.char_id}`}>
-                  <img alt={character.name} src={character.img} className='character' />
-                  <h3 className='App-link'>{character.name}</h3>
-                </Link>
+          <div className='charContainer'>
+            <Link to={`/character/${character.char_id}`}>
+              <div className='innerContainer' >
+              <img alt={character.name} src={character.img} className='character' />
+              <h3 className='App-link'>{character.name}</h3>
               </div>
-            </Col>
-          </Row>
+            </Link>
+          </div>
         ))
       }
       {status === 'loading' && <h1>Loading...</h1>}
+      <br />
+      <br /><br />
       {isNextpage && status !== 'loading' && (
         <button
           className='loadBtn'
@@ -48,7 +48,7 @@ function Home() {
         >Load More {Nextpage}</button>
       )
       }
-      {isNextpage &&
+      {!isNextpage &&
         (<div className='alertContainer'>
           <h1 className='alertNotification'>Gösterilecek Sayfa Kalmadı !</h1>
         </div>)

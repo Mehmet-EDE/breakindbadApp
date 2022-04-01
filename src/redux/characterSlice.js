@@ -26,6 +26,7 @@ export const characterSlice = createSlice({
             state.items = [...state.items, ...action.payload]
             state.status = 'succeeded'
             state.page += 1
+            if(state.page ===7) state.isNextpage=false
         }
     }
 });
